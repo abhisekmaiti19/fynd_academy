@@ -26,6 +26,6 @@ I am using this repository to track my progress and to share my work with others
 ## Projects
 
  1. **Project 1 (HTML)**
-		 <img alt="html_project" src="https://hithub.com/abhisekmaiti19/fynd_academy/html_proj.jpg" />
+		 <img alt="html_project" src="Vintage New Paper.jpg" />
 
 	 
