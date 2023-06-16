@@ -20,6 +20,10 @@ The repository is organized by date, with each day's work in its own folder. The
 I am using this repository to track my progress and to share my work with others. 
 
 ## Tasks
+1. **Task 1 (HTML - Amazon Clone)
+	<img alt="html_project" src="AmazonClone.jpg" />
+2. **Task 2 (HTML - CSS - Coffee Cup animated)
+	<img alt="html_project" src="cofeeCup.jpg" />
 
 
 
