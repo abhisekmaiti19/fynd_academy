@@ -27,6 +27,7 @@ I am using this repository to track my progress and to share my work with others
 
 
 <br/>
+
 ## Projects
 
  1. **Project 1 (HTML)**
