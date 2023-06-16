@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: rgb(168, 211, 249);
+      }
+      .main {
+        display: flex;
+        flex-direction: column;
+      }
+      .dhua {
+        width: 100vw;
+        height: 45vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .cupMain {
+        width: 100vw;
+        height: 23vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        /* border: 5px solid; */
+      }
+      .cupUp {
+        height: 150px;
+        width: 150px;
+        background-color: rgb(250, 250, 250);
+        /* border: solid 1px; */
+        /* transform: skew(30deg); */
+        border-radius: 0px 0px 0px 100px;
+        transform: translate(165px);
+      }
+      .cupdown {
+        height: 150px;
+        width: 150px;
+        /* border: solid 1px; */
+        transform: translateX(-90px);
+        background-color: rgb(238, 238, 238);
+        border-radius: 0px 0px 100px 0px;
+        transform: translate(100px);
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      }
+      .circle {
+        border: solid 19px rgb(238, 238, 238);
+        background-color: transparent;
+        width: 90px;
+        height: 85px;
+        border-radius: 200px;
+        transform: translate(65px, -33px);
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 2.6px;
+      }
+      .plate {
+        width: 220px;
+        height: 20px;
+        z-index: 500;
+        transform: translate(-215px, 70px);
+        border-radius: 0px 0px 50px 50px;
+        /* border: solid 2px; */
+        background-color: rgb(238, 238, 238);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .Blurcircle {
+        width: 220px;
+        height: 20px;
+        z-index: 500px;
+        background-color: aliceblue;
+        border-radius: 50px;
+      }
+      .dhua div:nth-child(2n + 1) {
+        width: 50px;
+        height: 50px;
+        border-radius: 80px;
+        /* border: solid; */
+        background-color: white;
+        opacity: 10%;
+
+        transition-property: all;
+        transition-duration: 5s;
+
+        /* transition-delay: 5s; */
+        transition-timing-function: ease-out;
+        animation-name: dhuadar;
+      }
+      .dhua div:nth-child(2n) {
+        width: 80px;
+        height: 80px;
+        border-radius: 80px;
+        /* border: solid; */
+        background-color: white;
+        opacity: 15%;
+        transition-property: all;
+        transition-duration: 5s;
+
+        /* transition-delay: 5s; */
+        transition-timing-function: ease-out;
+        animation-name: dhuadar;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+      .first {
+        /* border: solid; */
+        transform: translate(-40px, 240px);
+        /* display: none; */
+      }
+      .second {
+        transform: translate(-10px, 100px);
+        /* display: none; */
+      }
+      .third {
+        /* border: solid 2px; */
+        transform: translate(-20px, 90px);
+        /* display: none; */
+      }
+      .fourth {
+        /* border: solid 2px; */
+        transform: translate(-10px, -80px);
+        /* display: none; */
+      }
+
+      @keyframes dhuadar {
+        0% {
+          opacity: 60%;
+        }
+        50% {
+          opacity: 30%;
+        }
+        100% {
+          opacity: 00%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="dhua">
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+        <div class="fourth"></div>
+      </div>
+      <div class="cupMain">
+        <div class="cupUp"></div>
+        <div class="cupdown"></div>
+        <div class="circle"></div>
+        <div class="plate"></div>
+      </div>
+    </div>
+  </body>
+</html>
