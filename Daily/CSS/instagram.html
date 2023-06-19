@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .insta {
+        width: 500px;
+        height: 500px;
+        border: 2px solid;
+        border-radius: 80px;
+        background-image: linear-gradient(
+          30deg,
+          rgb(255, 187, 92),
+          rgb(255, 113, 36),
+          rgb(164, 0, 183),
+          rgb(95, 0, 228)
+        );
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation-name: colortrans;
+        animation-iteration-count: infinite;
+        animation-duration: 240s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite;
+      }
+      @keyframes colortrans {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(3600deg);
+        }
+      }
+      .inner1 {
+        width: 75%;
+        height: 75%;
+        border: 20px solid rgb(255, 255, 255);
+        border-radius: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* animation-name: colortrans1;
+        animation-iteration-count: infinite;
+        animation-duration: 54000s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite; */
+      }
+      /* @keyframes colortrans1 {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(3600deg);
+        }
+      } */
+      .inner2 {
+        width: 75%;
+        height: 63%;
+        border: 20px solid rgb(255, 255, 255);
+        border-radius: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 60px;
+      }
+      .final {
+        width: 5%;
+        height: 5%;
+        border: 20px solid rgb(255, 255, 255);
+        border-radius: 150px;
+        margin-bottom: 250px;
+        margin-right: 30px;
+        transition-property: all;
+        animation-name: insta;
+        animation-duration: 900ms;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite;
+      }
+      @keyframes insta {
+        form {
+          transform: scale(0%);
+        }
+        to {
+          transform: scale(1.5);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="insta">
+      <div class="inner1">
+        <div class="inner2"></div>
+        <div class="final"></div>
+      </div>
+    </div>
+  </body>
+</html>
