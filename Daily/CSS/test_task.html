@@ -64,7 +64,7 @@
         top: 180px;
         transform: rotate(-30deg);
         animation-name: magic;
-        animation-duration: 2s;
+        animation-duration: 5s;
       }
 
       .tray2 {
@@ -77,15 +77,23 @@
         border-radius: 15px;
         top: 180px;
         transform: rotate(-30deg);
-        transform: rotate(-30deg);
+
         animation-name: magic;
-        animation-duration: 2s;
+        animation-duration: 5s;
       }
 
       @keyframes magic {
-        from {
+        10% {
           transform: rotate(0);
           top: -560px;
+        }
+        70% {
+          transform: rotate(0);
+          top: 180px;
+        }
+        80% {
+          /* transform: rotate(-30deg); */
+          top: 180px;
         }
       }
 
