@@ -1,0 +1,1011 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f3fbff;
+  font-family: Poppins;
+}
+
+/* universal styling */
+
+body {
+  display: flex;
+  flex-direction: row;
+}
+.menue {
+  height: 100vh;
+  width: 20vw;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* aside menue style  */
+.menue aside {
+  position: absolute;
+  height: 85vh;
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 25px;
+  background-image: linear-gradient(#4c81d1, #3048c9);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  z-index: 50000;
+  left: 5vw;
+
+  /* animation */
+  transition-property: all;
+  animation-name: sidebar;
+  animation-duration: 800ms;
+  transition-duration: 800ms;
+  transition-timing-function: ease-in-out;
+}
+
+.activity {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+.logout {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: transparent;
+}
+.activity div,
+.logout div {
+  background-color: transparent;
+}
+.activity div a,
+.logout div a {
+  display: flex;
+  text-decoration: none;
+  flex-direction: row;
+  height: 15vh;
+  align-items: center;
+  padding-left: 1vw;
+  gap: 1vw;
+  background-color: transparent;
+  font-size: 205%;
+}
+.activity div i,
+.activity div h5,
+.logout div i,
+.logout div h5 {
+  background-color: transparent;
+  color: white;
+}
+.activity div i,
+.logout div i {
+  min-width: 65px;
+  min-height: 65px;
+  max-width: 65px;
+  max-height: 65px;
+  -webkit-text-stroke: 0.5px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 2px 2px #3e3e3e;
+  border-radius: 15px;
+  border: solid 5px white;
+  background-color: #c6ddff;
+}
+
+.activity .active i {
+  min-width: 65px;
+  min-height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 2px 2px #3e3e3e;
+  border-radius: 15px;
+  border: solid 5px white;
+  background-color: #00a3ff;
+}
+
+.logout div:hover,
+.activity div:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+
+.logout div:hover i {
+  background-color: #097abc;
+}
+.activity div:hover i {
+  background-color: #097abc;
+}
+
+.activity div h5,
+.logout div h5 {
+  min-width: 170px;
+  display: none;
+  color: #f3fbff;
+}
+
+.menue aside:hover {
+  width: 95%;
+}
+.menue aside:hover h5 {
+  display: block;
+}
+
+/* edit-profile */
+.mainContent {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80vw;
+  height: 100vh;
+  padding-left: 120px;
+  left: 20vw;
+  /* border: 2px solid; */
+}
+
+.mainContent .heading {
+  height: 20vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 1vw;
+  font-size: 25px;
+  color: #001a44;
+}
+
+/* edit profile form  */
+.mainContent form {
+  display: flex;
+  height: 80vh;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+/* edit profile input style  */
+.mainContent form input {
+  width: 50vw;
+  height: 10vh;
+  background-color: white;
+  border: #00a3ff 3px solid;
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 20px;
+  color: rgb(135, 158, 178);
+}
+/* edit profile form button section  */
+.mainContent form .btn {
+  display: flex;
+  column-gap: 5vw;
+}
+
+.mainContent form .btn:nth-child(2n) {
+  width: 40vw;
+}
+
+/* button1 and button2 default style  */
+#formBtn,
+#formBtn1 {
+  font-size: 20px;
+  background-color: #37f28d;
+  border: none;
+  font-weight: 700;
+  color: #127801;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  transition-property: all;
+  transition-duration: 100ms;
+  transition-timing-function: ease-in-out;
+}
+
+#formBtn1 {
+  background-color: #faff00;
+  color: #a48000;
+  width: 30vw;
+}
+
+#formBtn1:hover {
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+#formBtn:hover {
+  cursor: pointer;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+/* =========================== profile css ====================================== */
+.profileContent {
+  padding: 0;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 2px solid; */
+}
+.msg {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.msg div {
+  display: flex;
+  flex-direction: row;
+  font-size: 34px;
+  align-items: center;
+  gap: 12px;
+  color: #052a67;
+}
+
+.msg div img {
+  width: 64px;
+  height: 64px;
+}
+
+.editBtn {
+  display: flex;
+  /* border: 2px solid; */
+  height: 20vh;
+  width: 60vw;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.editBtn button {
+  width: 15vw;
+  height: 10vh;
+  border-radius: 15px;
+  font-size: 25px;
+  background-color: #ff9900;
+  color: #fff2c3;
+  border: none;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  transition-property: all;
+  transition-duration: 200ms;
+}
+
+.editBtn button:hover {
+  cursor: pointer;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+/* ====================Todo========================================= */
+.todo {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 25vw;
+  width: 75vw;
+  padding-left: 50px;
+  /* border: 3px solid; */
+  height: 100vh;
+  padding-bottom: 25px;
+}
+.upTodo {
+  height: 50%;
+  /* border: solid black 2px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* justify-content: center; */
+  padding-bottom: 20px;
+  border-bottom: #001a44 solid 2px;
+}
+.headTodo {
+  height: 45%;
+  display: flex;
+  align-items: center;
+  /* border: 2px solid black; */
+  font-size: 25px;
+  font-weight: 100;
+}
+.headTodo h1 {
+  border-bottom: 4px solid;
+}
+.searchTodo form {
+  /* border: 2px solid; */
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  /* justify-content: space-between; */
+}
+#catg {
+  width: 139px;
+  height: 65px;
+  border-radius: 15px;
+  background-color: white;
+  border: #4c81d1 solid 3px;
+  color: #4c81d1;
+  display: flex;
+  justify-content: center;
+  padding: 7px;
+  font-size: 20px;
+  font-weight: 800;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+#todoTxt {
+  width: 590px;
+  height: 65px;
+  border-radius: 15px;
+  border: #ff9900 solid 3px;
+  background-color: white;
+  font-size: 25px;
+  color: #d9d9d9;
+  padding: 8px;
+}
+#todoButton {
+  width: 112px;
+  height: 65px;
+  background-color: #49e300;
+  border: black 3px solid;
+  border-radius: 15px;
+  color: #127801;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  transition-property: all;
+  transition-duration: 200ms;
+}
+
+#todoButton:hover {
+  cursor: pointer;
+  color: black;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.filterTodo {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+
+#imp {
+  width: 131px;
+  height: 49px;
+  border-radius: 5px;
+  color: #ff0000;
+  border: #ff0000 2px solid;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#lessimp {
+  width: 131px;
+  height: 49px;
+  color: #ff9900;
+  border: #ff9900 2px solid;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#cazz {
+  width: 131px;
+  height: 49px;
+  color: green;
+  border: green 2px solid;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.downTodo {
+  max-height: 50%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3vw;
+  gap: 2vh;
+}
+.dataCard {
+  max-width: 1000px;
+  min-height: 63px;
+  display: flex;
+  flex-direction: row;
+  color: #5c5d5f;
+  border: solid 3px #5c5d5f;
+  align-items: center;
+  /* gap: 5vw; */
+  justify-content: space-between;
+  padding-left: 20px;
+
+  padding-right: 15px;
+  border-radius: 15px;
+  font-size: 25px;
+}
+.editTodo {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5vw;
+  font-size: 25px;
+}
+#tag {
+  width: 96px;
+  height: 39px;
+  font-size: 15px;
+  border: solid 2px #5c5d5f;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =======================================================================================================================================
+==============================  RESPONSIVE CODE ======================================================================================
+===================================================================================================================================== */
+
+@media screen and (min-width: 1366px) {
+  * {
+    padding-right: 20px;
+  }
+  .activity div a i,
+  .logout div a i {
+    padding-left: 20px;
+  }
+  #tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 18px;
+  }
+  #imp,
+  #lessimp {
+    padding-left: 10px;
+  }
+  #todoButton {
+    padding: 10px;
+  }
+  .profileContent {
+    padding: 0px;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 2px solid; */
+  }
+
+  .msg {
+    /* height: 80vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .msg div {
+    display: flex;
+    flex-direction: row;
+    /* margin-left: 10px; */
+    font-size: 30px;
+    align-items: center;
+    gap: 12px;
+    color: #052a67;
+  }
+
+  .msg div img {
+    width: 84px;
+    height: 64px;
+  }
+
+  .editBtn {
+    display: flex;
+    /* border: 2px solid; */
+    height: 20vh;
+    width: 60vw;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  * {
+    padding-right: 20px;
+  }
+  .activity div a i,
+  .logout div a i {
+    padding-left: 20px;
+  }
+  #tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 18px;
+  }
+  #imp,
+  #lessimp {
+    padding-left: 10px;
+  }
+  #todoButton {
+    padding: 10px;
+  }
+  .profileContent {
+    padding: 0px;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 2px solid; */
+  }
+
+  .msg {
+    /* height: 80vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .msg div {
+    display: flex;
+    flex-direction: row;
+    /* margin-left: 10px; */
+    font-size: 30px;
+    align-items: center;
+    gap: 12px;
+    color: #052a67;
+  }
+
+  .msg div img {
+    width: 84px;
+    height: 64px;
+  }
+
+  .editBtn {
+    display: flex;
+    /* border: 2px solid; */
+    height: 20vh;
+    width: 60vw;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  * {
+    padding-right: 20px;
+  }
+  .activity div a i,
+  .logout div a i {
+    padding-left: 20px;
+  }
+  #tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 18px;
+  }
+  #imp,
+  #lessimp {
+    padding-left: 10px;
+  }
+  #todoButton {
+    padding: 10px;
+  }
+  .profileContent {
+    padding: 0px;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 2px solid; */
+  }
+
+  .msg {
+    /* height: 80vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .msg div {
+    display: flex;
+    flex-direction: row;
+    /* margin-left: 10px; */
+    font-size: 30px;
+    align-items: center;
+    gap: 12px;
+    color: #052a67;
+  }
+
+  .msg div img {
+    width: 84px;
+    height: 64px;
+  }
+
+  .editBtn {
+    display: flex;
+    /* border: 2px solid; */
+    height: 20vh;
+    width: 60vw;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 394px) {
+  * {
+    background-color: #f3fbff;
+  }
+  body {
+    display: flex;
+    /* grid */
+    flex-direction: column-reverse;
+  }
+
+  .menue {
+    padding: 0;
+    width: 100vw;
+    position: fixed;
+    height: 10vh;
+    /* position: relative; */
+    bottom: 0;
+    /* background-color: #001a44; */
+    /* height: 60px; */
+    /* border: 2px solid; */
+    /* border-radius: 25px 25px 0px 0px; */
+    /* z-index: 5000; */
+    /* border: 20px solid; */
+  }
+  .menue aside {
+    bottom: 0;
+    position: absolute;
+    width: 100vw;
+    height: 10vh;
+    /* padding-bottom: 20px; */
+    /* padding: 15px; */
+    padding-left: 30px;
+    margin: 0;
+    left: 0;
+    z-index: 5000;
+    border-radius: 45px 45px 0px 0px;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    gap: 0px;
+  }
+
+  .menue aside .activity {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+
+  .menue aside .logout {
+    display: block;
+    background-color: transparent;
+  }
+
+  .menue aside .activity div i,
+  .menue aside .logout div i {
+    min-width: 49px;
+    min-height: 49px;
+    max-width: 45px;
+    max-height: 45px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    -webkit-text-stroke: 0.5px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 2px #3e3e3e;
+    border-radius: 15px;
+    border: solid 2px white;
+    background-color: #c6ddff;
+  }
+  .menue aside:hover {
+    width: 100vw;
+    height: 10vh;
+  }
+
+  .menue aside:hover h5 {
+    display: none;
+  }
+  .menue aside .activity .active i,
+  .menue aside .logout .active i {
+    background-color: #00a3ff;
+  }
+  .todo,
+  .profileContent,
+  .mainContent {
+    /* position: absolute; */
+    left: 0;
+    /* position: absolute; */
+    width: 100vw;
+    height: 82vh;
+    overflow: hidden;
+    padding-left: 15px;
+    /* background-color: #127801; */
+    /* border: 2px solid; */
+  }
+
+  .heading img {
+    width: 55px;
+  }
+
+  .upTodo {
+    height: 40%;
+    /* border: solid black 2px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* justify-content: center; */
+    padding-bottom: 5px;
+    border-bottom: #001a44 solid 2px;
+    padding-bottom: 20px;
+  }
+  .headTodo {
+    height: 35%;
+    display: flex;
+    align-items: center;
+    /* border: 2px solid black; */
+    font-size: 15px;
+    font-weight: 100;
+  }
+  .headTodo h1 {
+    border-bottom: 2px solid;
+  }
+  .searchTodo form {
+    /* border: 2px solid; */
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    /* justify-content: space-between; */
+  }
+  #catg {
+    width: 90px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: white;
+    border: #4c81d1 solid 3px;
+    color: #4c81d1;
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+    font-size: 10px;
+    font-weight: 800;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+      rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  }
+  #todoTxt {
+    width: 170px;
+    height: 45px;
+    border-radius: 5px;
+    border: #ff9900 solid 3px;
+    background-color: white;
+    font-size: 10px;
+    color: #807f7f;
+    padding: 8px;
+  }
+  #todoButton {
+    width: 60px;
+    height: 45px;
+    background-color: #49e300;
+    border: black 3px solid;
+    border-radius: 5px;
+    color: #127801;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
+    transition-property: all;
+    transition-duration: 200ms;
+  }
+
+  #todoButton:hover {
+    cursor: pointer;
+    color: black;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+
+  .filterTodo {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+  }
+
+  #imp {
+    width: 90px;
+    height: 35px;
+    border-radius: 5px;
+    color: #ff0000;
+    border: #ff0000 2px solid;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  #lessimp {
+    width: 90px;
+    height: 35px;
+    color: #ff9900;
+    border: #ff9900 2px solid;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  #cazz {
+    width: 90px;
+    height: 35px;
+    color: green;
+    border: green 2px solid;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .downTodo {
+    max-height: 60%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3vw;
+    gap: 2vh;
+  }
+  .dataCard {
+    max-width: 330px;
+    min-height: 50px;
+    display: flex;
+    flex-direction: row;
+    color: #5c5d5f;
+    border: solid 3px #5c5d5f;
+    align-items: center;
+    /* gap: 5vw; */
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 15px;
+    border-radius: 15px;
+    font-size: 10px;
+  }
+
+  .editTodo {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5vw;
+    font-size: 10px;
+  }
+  #tag {
+    width: 76px;
+    height: 25px;
+    font-size: 10px;
+    border: solid 2px #5c5d5f;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profileContent {
+    display: grid;
+    grid-template-rows: 80% 20%;
+  }
+  .profileContent .msg h1 {
+    font-size: 20px;
+    /* line-gap-override: 80px; */
+  }
+  .profileContent .msg img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .editBtn {
+    display: flex;
+    /* border: 2px solid; */
+    height: 20vh;
+    width: 60vw;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .editBtn button {
+    width: 100px;
+    height: 8vh;
+    border-radius: 15px;
+    font-size: 15px;
+    background-color: #ff9900;
+    color: #fff2c3;
+    border: none;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+      rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+      rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    transition-property: all;
+    transition-duration: 200ms;
+  }
+
+  .editBtn button:hover {
+    box-shadow: none;
+  }
+
+  /* ---------------------------------------------------------- */
+
+  .mainContent .heading {
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    /* gap: 1vw; */
+    font-size: 15px;
+    color: #001a44;
+  }
+
+  /* edit profile form  */
+  .mainContent form {
+    display: flex;
+    height: 75vh;
+    flex-direction: column;
+    gap: 1px;
+    /* justify-content: space-evenly; */
+  }
+  /* edit profile input style  */
+  .mainContent form input {
+    width: 90vw;
+    height: 65px;
+    background-color: white;
+    border: #00a3ff 3px solid;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 20px;
+    color: rgb(135, 158, 178);
+  }
+  /* edit profile form button section  */
+  .mainContent form .btn {
+    display: flex;
+    column-gap: 5vw;
+  }
+
+  .mainContent form .btn:nth-child(2n) {
+    width: 40vw;
+  }
+
+  /* button1 and button2 default style  */
+  #formBtn,
+  #formBtn1 {
+    font-size: 20px;
+    background-color: #37f28d;
+    border: none;
+    font-weight: 700;
+    color: #127801;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+      rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+      rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    transition-property: all;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
+  }
+
+  #formBtn1 {
+    background-color: #faff00;
+    color: #a48000;
+    width: 30vw;
+  }
+
+  #formBtn1:hover {
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  }
+
+  #formBtn:hover {
+    cursor: pointer;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  }
+}
