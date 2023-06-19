@@ -18,11 +18,30 @@
         transition-duration: 3s;
         transition-timing-function: ease-in;
       }
+      .gal {
+        transition: all;
+        transition-duration: 300s;
+        transition-timing-function: ease-in;
+      }
+
+      .con {
+        transition: all;
+        transition-duration: 800s;
+        transition-timing-function: ease-in;
+      }
       /* .main:hover ~ div:nth-child(2n) {
         width: 620px;
       } */
       .main:hover div {
         width: 620px;
+      }
+
+      .main:hover .gal {
+        width: 820px;
+      }
+
+      .main:hover .con {
+        width: 520px;
       }
 
       .main div:nth-child(2n) {
@@ -32,9 +51,9 @@
   </head>
   <body>
     <div class="main">
-      <div class="">Home</div>
-      <div>gallery</div>
-      <div>Contact</div>
+      <div class="home">Home</div>
+      <div class="gal">gallery</div>
+      <div class="con">Contact</div>
       <div>About</div>
     </div>
   </body>
