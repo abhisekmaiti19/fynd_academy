@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="mesg">Hello</h1>
+  </body>
+  <script>
+    //   let val = confirm("your age 18 ?");
+    //   console.log(val);
+    //   if (val == true) {
+    //     document.write("You are Adult !");
+    //   } else {
+    //     document.write("You are not Adult !");
+    //   }
+
+    let val = prompt("your age ?");
+    val = parseInt(val);
+    console.log(val);
+    if (val >= 18) {
+      // document.write("You are Welcome !");
+
+      document.getElementById("mesg").innerHTML = "hellooooooooooooo";
+    } else {
+      document.write("You are not Adult !");
+    }
+  </script>
+</html>

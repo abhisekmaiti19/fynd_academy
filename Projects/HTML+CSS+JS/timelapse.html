@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        /* overflow: hidden; */
+        box-sizing: border-box;
+        font-family: poppins;
+      }
+      body {
+        background-color: rgb(237, 237, 237);
+      }
+      .upper {
+        width: 100vw;
+        height: 25vh;
+        /* border: solid 2px black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      .btn {
+        width: 17%;
+        height: 40%;
+        border: 4px solid rgb(4, 80, 48);
+        border-radius: 0 10px 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: rgb(16, 110, 11);
+        padding: 5px;
+      }
+      .btn:hover,
+      .btn:focus {
+        background-color: rgb(255, 213, 0);
+        cursor: pointer;
+        color: black;
+        box-shadow: 10px 8px 2px rgb(53, 168, 4);
+        /* transition-property: ; */
+      }
+
+      .btn h1 {
+        font-size: 100%;
+      }
+      .time {
+        width: 100vw;
+        height: 65vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 20px;
+        justify-content: center;
+      }
+      .timedekho {
+        font-size: 10vw;
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        align-items: center;
+        width: 30%;
+        height: 60%;
+        color: rgb(54, 166, 65);
+        border: 5px solid darkgreen;
+        border-radius: 50px;
+      }
+      @media (max-width: 560px) {
+        .upper {
+          width: 100vw;
+          height: 40vh;
+          border: solid 2px black;
+          display: flex;
+          /* flex-direction: column; */
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          justify-content: space-evenly;
+        }
+
+        .btn {
+          width: 40%;
+          height: 15%;
+          border: 2px solid;
+          border-radius: 0 10px 0 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .time {
+          width: 100vw;
+          height: 40vh;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          justify-content: center;
+        }
+        .btn h1 {
+          font-size: 25px;
+        }
+      }
+      ul {
+        width: 100vw;
+        height: 20vh;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1vw;
+      }
+      li {
+        width: 20vw;
+        padding: 2px;
+        border: 3px solid rgb(0, 49, 4);
+        box-shadow: 5px;
+        font-size: 80%;
+        height: 5vh;
+        border-radius: 20px 0 20px 0;
+        text-align: center;
+        background-color: rgb(179, 255, 0);
+      }
+      .display {
+        /* max-width: 80vw; */
+        overflow-x: hidden;
+        border: 2px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="upper">
+      <div class="btn" id="start"><h1>Start</h1></div>
+      <div class="btn" id="lap"><h1>Lap</h1></div>
+      <div class="btn" id="stop"><h1>Stop</h1></div>
+      <div class="btn" id="reset"><h1>Re-Start</h1></div>
+      <div class="btn" id="clear"><h1>clear laps</h1></div>
+    </div>
+    <div class="time">
+      <div class="timedekho" id="hour">
+        <h1>00</h1>
+      </div>
+
+      <div class="timedekho" id="minute">
+        <h1>00</h1>
+      </div>
+
+      <div class="timedekho" id="second"><h1>00</h1></div>
+    </div>
+    <div class="display">
+      <ul id="mylapse">
+        <li>hello</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    //button element
+    let startBtn = document.getElementById("start");
+    let lapBtn = document.getElementById("lap");
+    let stopBtn = document.getElementById("stop");
+    let resettBtn = document.getElementById("reset");
+    let clearBtn = document.getElementById("clear");
+
+    let min = 0;
+    let hour = 0;
+    let second = 0;
+
+    //00:00:00
+
+    function setSecond(getSecond) {
+      document.getElementById("second").innerHTML = `<h1>${stringKaro(
+        getSecond
+      )}</h1>`;
+    }
+    function setMinute(getMinute) {
+      document.getElementById("minute").innerHTML = `<h1>${stringKaro(
+        getMinute
+      )}</h1>`;
+    }
+    function setHour(getHour) {
+      document.getElementById("hour").innerHTML = `<h1>${stringKaro(
+        getHour
+      )}</h1>`;
+    }
+
+    function getSecond() {
+      return document.getElementById("second").innerText;
+    }
+    function getMinute() {
+      return document.getElementById("minute").innerText;
+    }
+    function getHour() {
+      return document.getElementById("hour").innerText;
+    }
+
+    function laps() {
+      const node = document.createElement("li");
+      let textnode = document.createTextNode(
+        `${document.getElementById("hour").innerText}:${
+          document.getElementById("minute").innerText
+        }:${document.getElementById("second").innerText}`
+      );
+      node.appendChild(textnode);
+      document.getElementById("mylapse").appendChild(node);
+    }
+
+    let instance;
+    function startTime() {
+      second++;
+      if (second == 60) {
+        second = 0;
+        if (min == 60) {
+          min = 0;
+          hour++;
+          setHour(hour);
+        } else if (min <= 59) {
+          min++;
+          setMinute(min);
+        }
+      }
+      setSecond(second);
+    }
+
+    function stringKaro(myVal) {
+      if (myVal <= 9) {
+        return `0${myVal}`;
+      }
+      return myVal;
+    }
+
+    function start() {
+      clearInterval(instance);
+      instance = setInterval(() => {
+        startTime();
+      }, 1000);
+    }
+    // start();
+    function stop() {
+      clearInterval(instance);
+    }
+
+    function restart() {
+      clearInterval(instance);
+      min = 0;
+      hour = 0;
+      second = 0;
+      setHour(0);
+      setMinute(0);
+      setSecond(0);
+    }
+
+    startBtn.addEventListener("click", start);
+    stopBtn.addEventListener("click", stop);
+    resettBtn.addEventListener("click", restart);
+    lapBtn.addEventListener("click", laps);
+    clearBtn.addEventListener("click", () => {
+      document.getElementById("mylapse").innerHTML = `<li>hello</li>`;
+    });
+
+    function updateDom() {}
+  </script>
+</html>
