@@ -1,0 +1,11 @@
+{
+  "name": "fynd_academy",
+  "version": "1.0.0",
+  "description": "\"1st node package\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "author": "Abhisek Maiti",
+  "license": "ISC"
+}
