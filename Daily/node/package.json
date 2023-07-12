@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "\"1st node package\"",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "test": "test.js"
   },

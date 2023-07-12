@@ -18,15 +18,15 @@ const fs = require("fs");
 // console.log("hello again");
 // this will print hello again because || becs callback by default asynchronous it does not support Sync
 
-function task1(filename) {
-  //   const a = fs.readFileSync("filename", "utf-8");
-  //   console.log(filename);
+// function task1(filename) {
+//   //   const a = fs.readFileSync("filename", "utf-8");
+//   //   console.log(filename);
 
-  fs.readFile(filename, "utf-8", (err, data) => {
-    console.log(data);
-    //   console.log(data.toString()); // also we can toString
-  });
-}
+//   fs.readFile(filename, "utf-8", (err, data) => {
+//     console.log(data);
+//     //   console.log(data.toString()); // also we can toString
+//   });
+// }
 
 // let arr = ["myfile1.txt", "myfile2.txt"];
 // for (let i = 0; i < arr.length; i++) {
@@ -53,10 +53,14 @@ function task1(filename) {
 //     console.log('creating file')
 // })
 
-fs.rmdir("datafile", () => console.log());
-fs.unlink("myfile3.txt", () => console.log("deletefile"));
+// fs.rmdir("datafile", () => console.log());
+// fs.unlink("myfile3.txt", () => console.log("deletefile"));
 
-fs.rename("oldfilename.txt", "newfilename.txt", () => {});
-fs.copyFile("example.txt", "copiedfile.txt", () => {});
+// fs.rename("oldfilename.txt", "newfilename.txt", () => {});
+// fs.copyFile("example.txt", "copiedfile.txt", () => {});
 
 // =======================homework how to create new file==================== direct file
+
+fs.open("newfile2.txt", "w", (err, file) => {
+  console.log("File is opened in write mode.");
+});
