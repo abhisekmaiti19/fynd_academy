@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cookpal</title>
+  </head>
+  <body>
+    <!-- ||||||       =============================== nav Area =======================================     ||||||-->
+
+    <section class="navbar" id="navbar">
+      <!-- nav_logo -->
+      <div class="logo" id="logo">
+        <img src="./resource/cookbook.png" alt="Cookpal" width="150px" />
+      </div>
+
+      <!-- navmenue -->
+      <div class="navMenue" id="navMenue">
+        <div class="menueItem" id="menueItem">
+          <ul>
+            <li><a href="http://">Home</a></li>
+            <li><a href="http://">Explore</a></li>
+            <li><a href="http://">Help</a></li>
+          </ul>
+        </div>
+        <div class="avatar" id="avatar">
+          <img
+            src="./resource/avatar.png"
+            alt="avatar"
+            style="border-radius: 50px; border: solid 2px black"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="navbar mobilenavbar">
+      <div class="menue">
+        <i class="fi fi-br-menu-burger" id="burger"></i>
+        <div class="logo" id="logo">
+          <img src="./resource/cookbook.png" alt="Cookpal" width="150px" />
+        </div>
+      </div>
+    </section>
+    <div class="drawer" id="drawer">
+      <div class="logo-cross">
+        <i class="fi fi-br-cross" id="cross"></i>
+        <img src="./resource/cookbook.png" alt="Cookpal" width="150px" />
+      </div>
+      <div class="menueItem" id="menueItem">
+        <ul>
+          <li><a href="http://">Home</a></li>
+          <li><a href="http://">Explore</a></li>
+          <li><a href="http://">Help</a></li>
+        </ul>
+        <!-- l -->
+      </div>
+    </div>
+
+    <!--=============================== Hero Area ======================================= -->
+    <section class="hero" id="hero">
+      <h2>Trending now</h2>
+      <h1>Mike’s famous salad with cheese</h1>
+      <h4>By John Mike</h4>
+    </section>
+
+    <!--=============================== Search Area ======================================= -->
+    <section class="search" id="search">
+      <div class="searchTitle" id="searchTitle">
+        <h3>Search For Recipes</h3>
+      </div>
+      <div class="searchArea" id="searchArea">
+        <i class="fi fi-rr-search"></i>
+        <input
+          type="text"
+          name=""
+          id="korona"
+          value=""
+          placeholder="Search for recipes ..."
+        />
+        <div class="searchButton" id="dhur">
+          <i class="fi fi-rr-search"></i>
+        </div>
+      </div>
+      <div class="filterCard" id="filterCard">
+        <div class="all" id="all">
+          <h6>All Recipes</h6>
+          <i class="fi fi-br-angle-right"></i>
+        </div>
+        <div class="veg" id="veg">
+          <h6>Veg Recipes</h6>
+          <i class="fi fi-br-angle-right"></i>
+        </div>
+        <div class="non-veg" id="non-veg">
+          <h6>Non Veg Recipess</h6>
+          <i class="fi fi-br-angle-right"></i>
+        </div>
+      </div>
+    </section>
+
+    <!--=============================== Main Area ======================================= -->
+    <section class="main" id="main">
+      <div class="justTry">
+        <div class="filterRating" id="filterRating">
+          <div class="title"><h4>Filter</h4></div>
+          <div class="tictoc">
+            <div class="ratings"><h5>Ratings</h5></div>
+            <div class="myOptions">
+              <div class="four">
+                <input type="checkbox" value="four" id="four" checked="false" />
+                <label for="four&above">4 and Above</label>
+              </div>
+              <div class="below">
+                <input type="checkbox" value="below" id="below" />
+                <label for="four&above">Below 4</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menueItems" id="menueItems">
+        <!-- menue card  -->
+        <!-- <div class="menueCard" id="menueCard">
+          <div class="menueImg" id="menueImg"></div>
+          <div class="menueDesc" id="menueDesc">
+            <div class="vegNonVeg" id="vegNonVeg" style="color: gray">
+              <h6>veg or nonveg</h6>
+            </div>
+            <div class="titleRating" id="titleRating">
+              <h3>Rusian Salade</h3>
+              <div class="rating" id="rating">
+                <i class="fi fi-sr-star"></i>
+                <h6>4.5</h6>
+              </div>
+            </div>
+            <div class="timeLove" id="timeLove">
+              <h4>40 min</h4>
+              <div class="timeLoveIcon" id="timeLoveIcon">
+                <i class="fi fi-rr-heart"></i>
+                <i class="fi fi-rr-beacon"></i>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- menue card end -->
+      </div>
+    </section>
+
+    <!--=============================== Footer Area ======================================= -->
+    <section class="footer" id="footer">
+      <div class="logoDesc" id="logoDesc"></div>
+      <div class="navMenue" id="navMenue"></div>
+
+      <div class="subs" id="subs">
+        <img src="" alt="cookpal" />
+        <p>
+          Ut risus mattis interdum faucibus facilisi. Facilisi purus accumsan
+          aliquam.
+        </p>
+        <div class="doIt">
+          <input type="email" name="" id="" />
+          <input type="button" value="Subscribe" />
+        </div>
+      </div>
+      <div class="belowFooter" id="belowFooter">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+    </section>
+  </body>
+  <script src="./index.js"></script>
+</html>
